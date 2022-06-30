@@ -1,0 +1,110 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.popup {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	height: 100%;
+	width: 100%;
+	background-image: url(../img/bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.close-popup {
+	animation: closePopup 5s 1 ease-in;
+}
+
+@keyframes closePopup {
+
+	10% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(10) rotate(25deg);
+		opacity: 0;
+	}
+}
+
+.start-button {
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%,-50%);
+	background: none;
+	z-index: 2;
+}
+
+.close-button {
+	animation: closeButton 5s 1 ease-in;
+}
+
+@keyframes closeButton {
+
+	100% {
+		transform: scale(10) translate(-94%,-84%) rotate(45deg);
+	}
+}
+
+.prince {
+	object-fit: cover;
+	animation:livitation 5s infinite linear;
+	cursor: pointer;
+}
+
+@keyframes livitation{
+	0% {
+		transform: translateY(4px);
+	}
+
+	50% {
+		transform: translateY(-4px);
+	}
+
+	100% {
+		transform: translateY(4px);
+	}
+}
+
+.dairy {
+	width: 100%;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+} 
+
+.show-dairy {
+	animation: show 5s 1 ease-out;
+}
+
+@keyframes show{
+	0% {
+		transform: scale(0.1);
+		opacity: 0;
+	}
+
+	20% {
+		transform: scale(1.0);
+		opacity: 0.2;
+	}
+
+	80% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.hidden {
+	display: none;
+}
