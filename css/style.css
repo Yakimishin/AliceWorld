@@ -11,14 +11,15 @@ body {
 	transform: translate(-50%,-50%);
 	height: 100%;
 	width: 100%;
-	background-image: url(../img/bg.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
+	background-image:url(../img/ears.png) ,url(../img/bg.jpg);
+	background-position:center, center;
+	background-repeat:no-repeat, no-repeat;
+	background-size:contain, cover;
 	z-index: 1;
 }
 
 .close-popup {
-	animation: closePopup 5s 1 ease-in;
+	animation: closePopup 7s 1 ease-in;
 }
 
 @keyframes closePopup {
@@ -33,17 +34,40 @@ body {
 	}
 }
 
+.present {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.close-present {
+	animation: closePresent 7s 1 ease-in;
+}
+
+@keyframes closePresent {
+
+	20% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
 .start-button {
 	position: absolute;
 	left: 50%;
-	top: 70%;
+	top: 85%;
 	transform: translate(-50%,-50%);
 	background: none;
 	z-index: 2;
 }
 
 .close-button {
-	animation: closeButton 5s 1 ease-in;
+	animation: closeButton 7s 1 ease-in;
 }
 
 @keyframes closeButton {
@@ -54,7 +78,7 @@ body {
 }
 
 .prince {
-	object-fit: cover;
+	object-fit: contain;
 	animation:livitation 5s infinite linear;
 	cursor: pointer;
 }
@@ -82,7 +106,7 @@ body {
 } 
 
 .show-dairy {
-	animation: show 5s 1 ease-out;
+	animation: show 7s 1 ease-out;
 }
 
 @keyframes show{
