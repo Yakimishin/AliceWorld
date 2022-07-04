@@ -64,6 +64,7 @@ body {
 	transform: translate(-50%,-50%);
 	background: none;
 	z-index: 2;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .close-button {
@@ -81,6 +82,7 @@ body {
 	object-fit: contain;
 	animation:livitation 5s infinite linear;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 @keyframes livitation{
